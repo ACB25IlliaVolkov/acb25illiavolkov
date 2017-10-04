@@ -12,7 +12,7 @@ public class AllOfMe {
 
         for (int i = 0; massLength > i; i++) {
 
-            mass[i] = Math.round(numberMin + Math.round(Math.random()) * ((numberMax - numberMin) + 1));
+            mass[i] = (int)Math.round(Math.random() * (numberMax - numberMin) + numberMin);
 
         }
 
