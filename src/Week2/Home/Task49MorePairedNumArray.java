@@ -26,7 +26,7 @@ public class Task49MorePairedNumArray {
         AllOfMe.printMass(arNums1);
         AllOfMe.printMass(arNums2);
 
-        System.out.println("Парных значений больше в массиве "+(pairedNumAr1<pairedNumAr2 ? 2 : 1));
+        System.out.println("Парных значений больше в массиве "+(pairedNumAr1<pairedNumAr2 ? 2 : 1) + " (в первом " + pairedNumAr1 + " , во втором " + pairedNumAr2 + ")");
     }
 
 }
