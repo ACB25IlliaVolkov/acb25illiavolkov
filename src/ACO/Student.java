@@ -1,4 +1,4 @@
-package ACO.Week1;
+package ACO;
 
 /**
  * Created by serhii on 03.09.17.

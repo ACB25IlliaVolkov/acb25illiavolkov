@@ -1,9 +1,9 @@
-package ACO.Week1;
+package ACO;
 
 /**
  * Created by serhii on 03.09.17.
  */
-public class Main {
+public class StudentGroup {
 
     public static void main(String[] args) {
         testStudents();
@@ -16,12 +16,20 @@ public class Main {
         testShowAll();
     }
 
-    private static void testShowAll() {
-        Group group = new Group();
+    private static void testStudents() {
+        ACO.Student student = new ACO.Student();
+        student.name = "Ivan";
+        student.age = 25;
 
-        Student student = new Student();
+        System.out.printf("testStudent %s\n", student.name.equals("Ivan") && student.age == 25);
+    }
+
+    private static void testShowAll() {
+        ACO.Group group = new ACO.Group();
+
+        ACO.Student student = new ACO.Student();
         student.init("Ivan", 23);
-        Student student1 = new Student();
+        ACO.Student student1 = new ACO.Student();
         student1.init("Kolia",30);
 
         group.addStudent(student);
@@ -31,29 +39,21 @@ public class Main {
     }
 
     private static void testFindStudent() {
-        Group group = new Group();
-        group.addStudent(new Student());
-        Student found = group.findStudent("Ivan");
+        ACO.Group group = new ACO.Group();
+        group.addStudent(new ACO.Student());
+        ACO.Student found = group.findStudent("Ivan");
 
         System.out.printf("testFindStudent %s\n", found == null);
     }
 
     private static void testAddStudent() {
-        Group group = new Group();
-        Student student = new Student();
+        ACO.Group group = new ACO.Group();
+        ACO.Student student = new ACO.Student();
         student.init("Ivan" ,23);
         group.addStudent(student);
 
 
         System.out.printf("testAddStudent %s\n", group.getSize() == 1 && group.getStudentsList()[0] == student);
         //group.addStudent(new Student().init("Ivan" ,23));
-    }
-
-    private static void testStudents() {
-        Student student = new Student();
-        student.name = "Ivan";
-        student.age = 25;
-
-        System.out.printf("testStudent %s\n", student.name.equals("Ivan") && student.age == 25);
     }
 }

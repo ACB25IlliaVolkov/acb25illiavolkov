@@ -1,15 +1,15 @@
-package ACO.Week1;
+package ACO;
 
 /**
  * Created by serhii on 03.09.17.
  */
 public class Group {
 
-    private Student[] studentsList = new Student[10];
+    private ACO.Student[] studentsList = new ACO.Student[10];
     private int counter = 0;
 
 
-    public void addStudent(Student student){
+    public void addStudent(ACO.Student student){
         if(student == null){
             System.out.println("Illegal argument exception");
             return;
@@ -23,7 +23,7 @@ public class Group {
         studentsList[counter++] = student;
     }
 
-    public Student[] getStudentsList() {
+    public ACO.Student[] getStudentsList() {
         return studentsList;
     }
 
@@ -31,14 +31,14 @@ public class Group {
         return counter;
     }
 
-    public Student findStudent(String name) {
+    public ACO.Student findStudent(String name) {
         if(name == null){
             return null;
         }
 
 
         for (int i = 0; i < studentsList.length && studentsList[i] != null; i++) {
-            Student currStudent = studentsList[i];
+            ACO.Student currStudent = studentsList[i];
             if(name.equals(currStudent.name)){
                 return currStudent;
             }
@@ -53,7 +53,7 @@ public class Group {
     public void showAll() {
         System.out.println("№\t\tName\t\tAge\n");
         for (int i = 0; i < studentsList.length && studentsList[i] != null; i++) {
-            Student student = studentsList[i];
+            ACO.Student student = studentsList[i];
             System.out.printf("%d\t\t%s\t\t%d\n",i + 1, student.name, student.age);
         }
     }
