@@ -71,10 +71,10 @@ public class Company {
                 continue;
             }
 
-            System.out.println("User position - " + this.users[i].position + "; " +
-                    "User name - " + this.users[i].name + "; " +
-                    "age - " + this.users[i].age + "; " +
-                    "salary - " + this.users[i].salary + "; ");
+            String stFormatted = String.format("User position - %s; User name - %s; age - %d; salary - %.2f",
+                                                this.users[i].position, this.users[i].name, this.users[i].age, this.users[i].salary);
+
+            System.out.printf("\n" + stFormatted);
         }
     }
 
